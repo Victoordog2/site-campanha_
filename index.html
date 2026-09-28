@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Conheça [NOME DO CANDIDATO]</title>
+    <meta name="description" content="Conheça as propostas de [NOME DO CANDIDATO] para nossa região.">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+    <header class="header">
+        <div class="container header-content">
+
+            <div class="logo">
+                <span class="logo-small">CONHEÇA</span>
+                <strong>[NOME DO CANDIDATO]</strong>
+                <span class="cargo">DEPUTADO [ESTADUAL/FEDERAL]</span>
+            </div>
+
+            <button class="menu-button" id="menuButton">
+                ☰
+            </button>
+
+            <nav id="navigation">
+                <a href="#inicio">Início</a>
+                <a href="#explore">Explore</a>
+                <a href="#propostas">Propostas</a>
+                <a href="#agenda">Agenda</a>
+                <a href="#contato">Contato</a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <!-- HERO -->
+    <main>
+
+        <section id="inicio" class="hero">
+
+            <div class="container hero-content">
+
+                <div class="hero-text">
+
+                    <span class="tag">
+                        ELEIÇÕES 2026
+                    </span>
+
+                    <h1>
+                        O futuro da nossa região
+                        começa com boas ideias.
+                    </h1>
+
+                    <p>
+                        Conheça as propostas, escolha sua cidade
+                        e veja quais são as prioridades para a nossa região.
+                    </p>
+
+                    <a href="#explore" class="button primary">
+                        Explorar propostas
+                    </a>
+
+                </div>
+
+                <div class="hero-card">
+
+                    <div class="candidate-photo">
+                        <div>
+                            FOTO DO<br>
+                            CANDIDATO
+                        </div>
+                    </div>
+
+                    <div class="candidate-info">
+                        <strong>[NOME DO CANDIDATO]</strong>
+                        <span>Deputado [Estadual/Federal]</span>
+                        <b>NÚMERO</b>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- EXPLORADOR -->
+        <section id="explore" class="explore section">
+
+            <div class="container">
+
+                <div class="section-title">
+
+                    <span class="tag">
+                        PARTICIPE
+                    </span>
+
+                    <h2>
+                        O que é prioridade para você?
+                    </h2>
+
+                    <p>
+                        Escolha uma cidade e depois um tema
+                        para conhecer as propostas.
+                    </p>
+
+                </div>
+
+
+                <!-- CIDADES -->
+                <div class="step">
+
+                    <div class="step-number">1</div>
+
+                    <div class="step-content">
+
+                        <h3>Escolha sua cidade</h3>
+
+                        <div class="city-grid" id="cityGrid">
+
+                            <button class="city-button" data-city="Gravataí">
+                                📍 Gravataí
+                            </button>
+
+                            <button class="city-button" data-city="Cachoeirinha">
+                                📍 Cachoeirinha
+                            </button>
+
+                            <button class="city-button" data-city="Canoas">
+                                📍 Canoas
+                            </button>
+
+                            <button class="city-button" data-city="Porto Alegre">
+                                📍 Porto Alegre
+                            </button>
+
+                            <button class="city-button" data-city="Alvorada">
+                                📍 Alvorada
+                            </button>
+
+                            <button class="city-button" data-city="Outra cidade">
+                                📍 Outra cidade
+                            </button>
+
+                        </div>
+
+                        <p class="selection">
+                            Cidade selecionada:
+                            <strong id="selectedCity">
+                                nenhuma
+                            </strong>
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- TEMAS -->
+                <div class="step">
+
+                    <div class="step-number">2</div>
+
+                    <div class="step-content">
+
+                        <h3>Escolha um tema</h3>
+
+                        <div class="theme-grid">
+
+                            <button class="theme-button" data-theme="saude">
+                                <span>🏥</span>
+                                Saúde
+                            </button>
+
+                            <button class="theme-button" data-theme="seguranca">
+                                <span>🛡️</span>
+                                Segurança
+                            </button>
+
+                            <button class="theme-button" data-theme="educacao">
+                                <span>🎓</span>
+                                Educação
+                            </button>
+
+                            <button class="theme-button" data-theme="emprego">
+                                <span>💼</span>
+                                Emprego
+                            </button>
+
+                            <button class="theme-button" data-theme="infraestrutura">
+                                <span>🛣️</span>
+                                Infraestrutura
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- RESULTADO -->
+                <div id="result" class="result">
+
+                    <div class="result-header">
+
+                        <span id="resultIcon">📋</span>
+
+                        <div>
+                            <span class="result-label">
+                                SUA ESCOLHA
+                            </span>
+
+                            <h2 id="resultTitle">
+                                Escolha uma cidade e um tema
+                            </h2>
+                        </div>
+
+                    </div>
+
+                    <p id="resultDescription">
+                        As propostas relacionadas aparecerão aqui.
+                    </p>
+
+                    <div id="proposalList" class="proposal-list"></div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PROPOSTAS -->
+        <section id="propostas" class="section proposals-section">
+
+            <div class="container">
+
+                <div class="section-title">
+
+                    <span class="tag">
+                        PROPOSTAS
+                    </span>
+
+                    <h2>
+                        Principais compromissos
+                    </h2>
+
+                </div>
+
+                <div class="cards">
+
+                    <article class="info-card">
+                        <span class="card-icon">🏥</span>
+                        <h3>Saúde</h3>
+                        <p>
+                            Apoiar projetos e buscar recursos
+                            para melhorar o atendimento à população.
+                        </p>
+                    </article>
+
+                    <article class="info-card">
+                        <span class="card-icon">🎓</span>
+                        <h3>Educação</h3>
+                        <p>
+                            Investir em iniciativas que ampliem
+                            oportunidades para estudantes.
+                        </p>
+                    </article>
+
+                    <article class="info-card">
+                        <span class="card-icon">🛣️</span>
+                        <h3>Infraestrutura</h3>
+                        <p>
+                            Trabalhar pela melhoria da infraestrutura
+                            e mobilidade regional.
+                        </p>
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- AGENDA -->
+        <section id="agenda" class="section agenda-section">
+
+            <div class="container">
+
+                <div class="section-title">
+
+                    <span class="tag">
+                        AGENDA
+                    </span>
+
+                    <h2>
+                        Próximos eventos
+                    </h2>
+
+                </div>
+
+                <div class="agenda-list">
+
+                    <article class="agenda-item">
+
+                        <div class="date">
+                            <strong>10</strong>
+                            <span>OUT</span>
+                        </div>
+
+                        <div>
+                            <h3>Encontro com moradores</h3>
+                            <p>📍 Gravataí — 19h</p>
+                        </div>
+
+                    </article>
+
+                    <article class="agenda-item">
+
+                        <div class="date">
+                            <strong>12</strong>
+                            <span>OUT</span>
+                        </div>
+
+                        <div>
+                            <h3>Reunião comunitária</h3>
+                            <p>📍 Cachoeirinha — 18h30</p>
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONTATO -->
+        <section id="contato" class="contact section">
+
+            <div class="container contact-content">
+
+                <div>
+
+                    <span class="tag">
+                        PARTICIPE
+                    </span>
+
+                    <h2>
+                        Quer acompanhar a campanha?
+                    </h2>
+
+                    <p>
+                        Entre em contato pelos canais oficiais
+                        e acompanhe as novidades.
+                    </p>
+
+                </div>
+
+                <div class="contact-buttons">
+
+                    <a
+                        href="https://wa.me/5551999999999"
+                        target="_blank"
+                        class="button whatsapp"
+                    >
+                        💬 WhatsApp
+                    </a>
+
+                    <a
+                        href="https://instagram.com/"
+                        target="_blank"
+                        class="button instagram"
+                    >
+                        📸 Instagram
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- RODAPÉ -->
+    <footer>
+
+        <div class="container footer-content">
+
+            <div>
+                <strong>[NOME DO CANDIDATO]</strong>
+                <p>Deputado [Estadual/Federal]</p>
+            </div>
+
+            <div>
+                <p>
+                    Material informativo de campanha.
+                </p>
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
